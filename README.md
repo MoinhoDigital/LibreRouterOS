@@ -18,7 +18,7 @@ packages into package/feeds/
 
 You need Docker installed, if you don't have it run `wget -O - https://get.docker.com | bash` to install.
 
-Simply run `docker run -it luandro/libremesh bash` or clone this repository and create a `docker build` yourself, after you've modified the necessary files.
+Simply run `docker run -it luandro/libremesh bash` or clone this repository and create a `docker build` yourself after you've modified the necessary files. Inside the container `cd openwrt` and run `make menuconfig` to select your targets and packages. Finally run `make` to build.
 
 
 ## Development of LibreMesh packages
