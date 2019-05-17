@@ -1,6 +1,8 @@
 
 ## Build instructions
 
+### Building in running system
+
 You need gcc, binutils, bzip2, flex, python, perl, make, find, grep, diff,
 unzip, gawk, getopt, subversion, libz-dev and libc headers installed.
 
@@ -10,6 +12,13 @@ defined in feeds.conf.default
 packages into package/feeds/
 3. Run `cp configs/default_config .config`
 4. Run `make` to build your firmware.
+
+
+### Building in docker container
+
+You need Docker installed, if you don't have it run `wget -O - https://get.docker.com | bash` to install.
+
+Simply run `docker run -it luandro/libremesh bash` or clone this repository and create a `docker build` yourself, after you've modified the necessary files.
 
 
 ## Development of LibreMesh packages
