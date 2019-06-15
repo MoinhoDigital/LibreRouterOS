@@ -1,25 +1,23 @@
 
 ## Build instructions
 
-### Building in running system
-
-You need gcc, binutils, bzip2, flex, python, perl, make, find, grep, diff,
-unzip, gawk, getopt, subversion, libz-dev and libc headers installed.
+Dependencies: You must have installed: gcc, binutils, bzip2, flex, python,
+perl, make, find, grep, diff, unzip, gawk, getopt, subversion, time,
+libz-dev (or zlib) and libc headers.
 
 1. Run `./scripts/feeds update -a` to obtain all the latest package definitions
 defined in feeds.conf.default
 2. Run `./scripts/feeds install -a` to install symlinks for all obtained
 packages into package/feeds/
 3. Run `cp configs/default_config .config`
-4. Run `make` to build your firmware.
-
+4. Run `make` to build your firmware. After choosing the options in the ncurses
+menu, choose Exit and then Yes when asked if you want to save.
 
 ### Building in docker container
 
 You need Docker installed, if you don't have it run `wget -O - https://get.docker.com | bash` to install.
 
 Simply run `docker run -it luandro/libremesh bash` or clone this repository and create a `docker build` yourself after you've modified the necessary files. Inside the container `cd openwrt` and run `make menuconfig` to select your targets and packages. Finally run `make` to build.
-
 
 ## Development of LibreMesh packages
 
@@ -95,7 +93,7 @@ the default configuration run `$ ./scripts/diffconfig.sh  | diff configs/default
 * To save the new config to a new file (for backup purposes, to add it to a git repo, etc) run
 `$ ./scripts/diffconfig.sh  > configs/your_config`
 * To change the default configuration, for example to perform a pull request to `git@github.com:LibreRouterOrg/openwrt.git` run
-`$ ./scripts/diffconfig.sh  > configs/your_config`
+`$ ./scripts/diffconfig.sh  > configs/default_config`
 
 
 ## Upgrading the buildroot
