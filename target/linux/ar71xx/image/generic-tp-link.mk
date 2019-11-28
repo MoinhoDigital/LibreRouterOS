@@ -87,7 +87,7 @@ TARGET_DEVICES += archer-c5-v1
 define Device/archer-c7-v1
   $(Device/tplink-8mlzma)
   DEVICE_TITLE := TP-LINK Archer C7 v1
-  DEVICE_PACKAGES := kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport kmod-ath10k ath10k-firmware-qca988x
+  DEVICE_PACKAGES := kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
   BOARDNAME := ARCHER-C7
   DEVICE_PROFILE := ARCHERC7
   TPLINK_HWID := 0x75000001
@@ -131,7 +131,7 @@ TARGET_DEVICES += tl-wdr7500-v3
 define Device/archer-c7-v4
   $(Device/archer-cxx)
   DEVICE_TITLE := TP-LINK Archer C7 v4
-  DEVICE_PACKAGES := kmod-ath10k ath10k-firmware-qca988x
+  DEVICE_PACKAGES := kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport kmod-ath10k ath10k-firmware-qca988x
   BOARDNAME := ARCHER-C7-V4
   TPLINK_BOARD_ID := ARCHER-C7-V4
   IMAGE_SIZE := 15104k
@@ -146,8 +146,8 @@ define Device/archer-c7-v5
   DEVICE_TITLE := TP-LINK Archer C7 v5
   BOARDNAME := ARCHER-C7-V5
   TPLINK_BOARD_ID := ARCHER-C7-V5
-  IMAGE_SIZE := 15104k
-  MTDPARTS := spi0.0:128k(factory-uboot)ro,128k(u-boot)ro,64k@0x50000(art)ro,1536k@0xc0000(kernel),13824k(rootfs),15360k@0xc0000(firmware)
+  IMAGE_SIZE := 15360k
+  MTDPARTS := spi0.0:128k(factory-uboot)ro,128k(u-boot)ro,64k@0x50000(art)ro,128k@0x60000(info)ro,1536k@0xc0000(kernel),13824k(rootfs),15360k@0xc0000(firmware)
   SUPPORTED_DEVICES := archer-c7-v5
 endef
 TARGET_DEVICES += archer-c7-v5
@@ -175,6 +175,20 @@ define Device/cpe510-520-v1
 endef
 TARGET_DEVICES += cpe510-520-v1
 
+define Device/cpe510-v2
+  $(Device/cpe510-520-v1)
+  DEVICE_TITLE := TP-LINK CPE510 v2
+  BOARDNAME := CPE510V2
+endef
+TARGET_DEVICES += cpe510-v2
+
+define Device/cpe510-v3
+  $(Device/cpe510-520-v1)
+  DEVICE_TITLE := TP-LINK CPE510 v3
+  BOARDNAME := CPE510V3
+endef
+TARGET_DEVICES += cpe510-v3
+
 define Device/cpe210-220-v1
   $(Device/cpe510-520-v1)
   DEVICE_TITLE := TP-LINK CPE210/220 v1
@@ -194,6 +208,13 @@ define Device/cpe210-v2
   TPLINK_HEADER_VERSION := 1
 endef
 TARGET_DEVICES += cpe210-v2
+
+define Device/cpe210-v3
+  $(Device/cpe210-v2)
+  DEVICE_TITLE := TP-LINK CPE210 v3
+  BOARDNAME := CPE210V3
+endef
+TARGET_DEVICES += cpe210-v3
 
 define Device/wbs210-v1
   $(Device/cpe510-520-v1)

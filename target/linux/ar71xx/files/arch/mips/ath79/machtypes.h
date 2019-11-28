@@ -75,6 +75,9 @@ enum ath79_mach_type {
 	ATH79_MACH_CF_E530N,			/* COMFAST CF-E530N */
 	ATH79_MACH_CPE210,			/* TP-LINK CPE210 v1 */
 	ATH79_MACH_CPE210_V2,			/* TP-LINK CPE210 v2 */
+	ATH79_MACH_CPE210_V3,			/* TP-LINK CPE210 v3 */
+	ATH79_MACH_CPE510_V2,			/* TP-LINK CPE510 v2 */
+	ATH79_MACH_CPE510_V3,			/* TP-LINK CPE510 v3 */
 	ATH79_MACH_CPE505N,			/* P&W CPE505N */
 	ATH79_MACH_CPE510,			/* TP-LINK CPE510 */
 	ATH79_MACH_CPE830,			/* YunCore CPE830 */
@@ -330,7 +333,7 @@ enum ath79_mach_type {
 	ATH79_MACH_UBNT_UAP_PRO,		/* Ubiquiti UniFi AP Pro */
 	ATH79_MACH_UBNT_UNIFI,			/* Ubiquiti Unifi */
 	ATH79_MACH_UBNT_UNIFIAC_LITE,		/* Ubiquiti Unifi AC LITE/LR/MESH */
-	ATH79_MACH_UBNT_UNIFIAC_PRO,		/* Ubiquiti Unifi AC PRO */
+	ATH79_MACH_UBNT_UNIFIAC_PRO,		/* Ubiquiti Unifi AC PRO/MESH PRO */
 	ATH79_MACH_UBNT_UNIFI_OUTDOOR,		/* Ubiquiti UnifiAP Outdoor */
 	ATH79_MACH_UBNT_UNIFI_OUTDOOR_PLUS,	/* Ubiquiti UnifiAP Outdoor+ */
 	ATH79_MACH_UBNT_XM,			/* Ubiquiti Networks XM board rev 1.0 */

@@ -155,7 +155,7 @@ static struct device_info boards[] = {
 		.last_sysupgrade_partition = "support-list",
 	},
 
-	/** Firmware layout for the CPE210 V2 */
+	/** Firmware layout for the CPE210 V2 and V3 */
 	{
 		.id     = "CPE210V2",
 		.vendor = "CPE210(TP-LINK|UN|N300-2|00000000):2.0\r\n",
@@ -170,7 +170,11 @@ static struct device_info boards[] = {
 			"CPE210(TP-LINK|US|N300-2|55530000):2.0\r\n"
 			"CPE210(TP-LINK|UN|N300-2):2.0\r\n"
 			"CPE210(TP-LINK|EU|N300-2):2.0\r\n"
-			"CPE210(TP-LINK|US|N300-2):2.0\r\n",
+			"CPE210(TP-LINK|US|N300-2):2.0\r\n"
+			"CPE210(TP-LINK|EU|N300-2|45550000):3.0\r\n"
+			"CPE210(TP-LINK|UN|N300-2|00000000):3.0\r\n"
+			"CPE210(TP-LINK|UN|N300-2):3.0\r\n"
+			"CPE210(TP-LINK|EU|N300-2):3.0\r\n",
 		.support_trail = '\xff',
 		.soft_ver = NULL,
 
@@ -210,7 +214,27 @@ static struct device_info boards[] = {
 			"CPE510(TP-LINK|EU|N300-5):1.1\r\n"
 			"CPE520(TP-LINK|UN|N300-5):1.1\r\n"
 			"CPE520(TP-LINK|US|N300-5):1.1\r\n"
-			"CPE520(TP-LINK|EU|N300-5):1.1\r\n",
+			"CPE520(TP-LINK|EU|N300-5):1.1\r\n"
+			"CPE510(TP-LINK|EU|N300-5|00000000):2.0\r\n"
+			"CPE510(TP-LINK|EU|N300-5|45550000):2.0\r\n"
+			"CPE510(TP-LINK|EU|N300-5|55530000):2.0\r\n"
+			"CPE510(TP-LINK|UN|N300-5|00000000):2.0\r\n"
+			"CPE510(TP-LINK|UN|N300-5|45550000):2.0\r\n"
+			"CPE510(TP-LINK|UN|N300-5|55530000):2.0\r\n"
+			"CPE510(TP-LINK|US|N300-5|55530000):2.0\r\n"
+			"CPE510(TP-LINK|UN|N300-5):2.0\r\n"
+			"CPE510(TP-LINK|EU|N300-5):2.0\r\n"
+			"CPE510(TP-LINK|US|N300-5):2.0\r\n"
+			"CPE510(TP-LINK|EU|N300-5|00000000):3.0\r\n"
+			"CPE510(TP-LINK|EU|N300-5|45550000):3.0\r\n"
+			"CPE510(TP-LINK|EU|N300-5|55530000):3.0\r\n"
+			"CPE510(TP-LINK|UN|N300-5|00000000):3.0\r\n"
+			"CPE510(TP-LINK|UN|N300-5|45550000):3.0\r\n"
+			"CPE510(TP-LINK|UN|N300-5|55530000):3.0\r\n"
+			"CPE510(TP-LINK|US|N300-5|55530000):3.0\r\n"
+			"CPE510(TP-LINK|UN|N300-5):3.0\r\n"
+			"CPE510(TP-LINK|EU|N300-5):3.0\r\n"
+			"CPE510(TP-LINK|US|N300-5):3.0\r\n",
 		.support_trail = '\xff',
 		.soft_ver = NULL,
 
@@ -626,7 +650,11 @@ static struct device_info boards[] = {
 		.support_list =
 			"SupportList:\n"
 			"{product_name:Archer C7,product_ver:5.0.0,special_id:00000000}\n"
-			"{product_name:Archer C7,product_ver:5.0.0,special_id:55530000}\n",
+			"{product_name:Archer C7,product_ver:5.0.0,special_id:45550000}\n"
+			"{product_name:Archer C7,product_ver:5.0.0,special_id:55530000}\n"
+			"{product_name:Archer C7,product_ver:5.0.0,special_id:43410000}\n"
+			"{product_name:Archer C7,product_ver:5.0.0,special_id:4A500000}\n"
+			"{product_name:Archer C7,product_ver:5.0.0,special_id:54570000}\n",
 
 		.support_trail = '\x00',
 		.soft_ver = "soft_ver:1.0.0\n",

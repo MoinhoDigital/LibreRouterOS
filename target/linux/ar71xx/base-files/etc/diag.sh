@@ -162,8 +162,17 @@ get_status_led() {
 	cf-e385ac)
 		status_led="$board:blue:wlan2g"
 		;;
+	cpe210-v2|\
+	cpe210-v3|\
+	cpe220-v3|\
+	cpe510-v2|\
+	cpe510-v3|\
+	cpe210|\
 	cpe510)
 		status_led="tp-link:green:link4"
+		;;
+	cpe610)
+		status_led="tp-link:green:link1"
 		;;
 	cr3000|\
 	cr5000)
