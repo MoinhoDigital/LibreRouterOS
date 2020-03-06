@@ -1,19 +1,21 @@
 # Read the documentation in /docs directory
 # and on http://libremesh.org
 
-### System options
+### System optionstrue
 
-config lime system
-
+config lime 'system'
+	option firstbootwizard_configured 'true'
 
 ### Network general option
 
-config lime network
 
+config lime 'network'
 
 ### WiFi general options
 
-config lime wifi
+config lime 'wifi'
 	list modes 'ap_2ghz'
 	list modes 'apname_2ghz'
 	list modes 'ieee80211s_5ghz'
+	option adhoc_ssid 'LiMe.%H'
+	option ap_ssid 'moinho.digital'
